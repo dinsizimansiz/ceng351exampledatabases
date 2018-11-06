@@ -1,12 +1,3 @@
--- Create a new database called 'Ships'
--- Connect to the 'master' database to run this snippet
--- Drop the database 'Ships'
--- Connect to the 'master' database to run this snippet
-USE master
-GO
--- Uncomment the ALTER DATABASE statement below to set the database to SINGLE_USER mode if the drop database command fails because the database is in use.
--- ALTER DATABASE Ships SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
--- Drop the database if it exists
 IF EXISTS (
   SELECT name
    FROM sys.databases
@@ -15,10 +6,7 @@ IF EXISTS (
 DROP DATABASE Ships
 GO
 
--- Create a new database called 'Ships'
--- Connect to the 'master' database to run this snippet
 
--- Create the new database if it does not exist already
 IF NOT EXISTS (
     SELECT name
         FROM sys.databases
@@ -31,7 +19,6 @@ USE Ships
 GO
 
 
--- Drop the table 'Sailors' in schema 'SchemaName'
 IF EXISTS (
     SELECT *
         FROM sys.tables
@@ -42,7 +29,6 @@ IF EXISTS (
 )
     DROP TABLE SchemaName.Sailors
 GO
--- Drop the table 'Boats' in schema 'SchemaName'
 IF EXISTS (
     SELECT *
         FROM sys.tables
@@ -54,7 +40,6 @@ IF EXISTS (
     DROP TABLE SchemaName.Boats
 GO
 
--- Drop the table 'Reserves' in schema 'SchemaName'
 IF EXISTS (
     SELECT *
         FROM sys.tables
