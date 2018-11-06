@@ -91,7 +91,7 @@ VALUES (64,'Horatio',7,35.0)
 INSERT INTO Sailors
 VALUES (71,'Zorba',10,16)
 INSERT INTO Sailors
-VALUES (74,'Horation',9,35.0)
+VALUES (74,'Horatio',9,35.0)
 INSERT INTO Sailors
 VALUES (85,'Art',3,25.5)
 INSERT INTO Sailors
